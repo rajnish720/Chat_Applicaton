@@ -15,7 +15,7 @@ dotenv.config();
 const __dirname = path.resolve();
 
 const corsOptions = {
-    origin: 'http://localhost:3000',
+    origin: '*',
     credentials: true, // Allow credentials (cookies) to be sent
   };
   
