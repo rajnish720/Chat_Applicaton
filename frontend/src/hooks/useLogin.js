@@ -11,7 +11,7 @@ const useLogin = () => {
 		if (!success) return;
 		setLoading(true);
 		try {
-			const res = await fetch("https://chat-applicaton.onrender.com/api/auth/login", {
+			const res = await fetch(`https://chat-applicaton.onrender.com/api/auth/login`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ userName, password }),
@@ -21,6 +21,8 @@ const useLogin = () => {
 			const data = await res.json();
 			// console.log("Login response",res);
 			// console.log("Login Data",data);
+
+
 
 			if (data.error) {
 				throw new Error(data.error);
