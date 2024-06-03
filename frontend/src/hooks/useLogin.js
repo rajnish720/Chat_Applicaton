@@ -19,8 +19,8 @@ const useLogin = () => {
 			});
 
 			const data = await res.json();
-			console.log("Login response",res);
-			console.log("Login Data",data);
+			// console.log("Login response",res);
+			// console.log("Login Data",data);
 
 			if (data.error) {
 				throw new Error(data.error);
